@@ -1,7 +1,8 @@
 class CatsController < ApplicationController
 
     def index
-        render json: Cat.all
+        @cats = Cat.all
+        render :index
     end
 
     def create
@@ -17,8 +18,8 @@ class CatsController < ApplicationController
     end
 
     def show
-        cat = Cat.find_by(params[:id])
-        render json: cat
+        @cat = Cat.find_by(params[:id])
+        render :show
     end
 
     def update
