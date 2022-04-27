@@ -26,7 +26,7 @@ class CatsController < ApplicationController
     end
 
     def show
-        @cat = Cat.find_by(params[:id])
+        @cat = Cat.find(params[:id])
         render :show
     end
 
@@ -39,8 +39,10 @@ class CatsController < ApplicationController
             render :edit
         end
     end
+    
+private
 
-    def destroy
-
+    def cat_params
+        params.require(:cat).permit(:name, :birth_date, :color, :sex, :description)
     end
 end
