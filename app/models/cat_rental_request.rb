@@ -1,9 +1,11 @@
 class CatRentalRequest < ApplicationRecord
 
-    STATUS_STATES = %w(Pending Denied Approved)
+    STATUS_STATES = %w(Pending Denied Approved).freeze
 
-    validates :cat_id, :start_date, :end_date, :status, presence: true, dependent: :destroy
+    validates :cat_id, :start_date, :end_date, :status, presence: true
     validates :status, inclusion: STATUS_STATES
+    validate :start_must_come_before_end
+    validate :does_not_overlap_approved_request
 
     belongs_to :cat
 
@@ -12,8 +14,8 @@ class CatRentalRequest < ApplicationRecord
     def approve!
         raise 'not pending' unless self.status == 'PENDING'
         
-        transaction.do
-            self.status = 'APPROVE'
+        transaction do
+            self.status = 'APPROVED'
             self.save!
 
             overlapping_pending_requests.each do |request|
