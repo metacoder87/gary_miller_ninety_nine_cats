@@ -1,11 +1,25 @@
 
-
-<h1>All Cats</h1>
-
-<ul>
-    <% @cats.each do |cat| %>
-    <li><a href="<%= cat_url(cat) %>"><%= cat.name %></a></li>
-    <% end %>
-</ul>
-
-<a href="<%= new_cat_url %>">Add a Cat</a>
+<%= render 'topnav', cat: @cat %>
+<main>
+    <section class="cat-index-holder">
+        <nav>
+            <h1>All Cats</h1>
+            <a href="<%= 'cats/new' %>">
+            Add Cat
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            </a>
+        </nav>
+        <section class="cat-index">
+            
+                <% @cats.each do |cat| %>
+                <div class="cat-index-item">
+                    <div>
+                        <img src="http://placekitten.com/g/231/231">
+                        <br>
+                        <a href="<%= cat_url(cat) %>"><%= "Rent " + cat.name %></a>
+                    </div>
+                </div>
+                <% end %>
+        </section>
+    </section>
+</main>
