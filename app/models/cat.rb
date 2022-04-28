@@ -10,7 +10,7 @@ class Cat < ApplicationRecord
     validates :birth_date, :color, :name, :sex, presence: true
 
     has_many :rental_requests,
-        class_name: 'CatRentalRequest'
+        class_name: 'CatRentalRequest',
         dependent: :destroy
 
     def age
