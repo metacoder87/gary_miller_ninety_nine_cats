@@ -1,5 +1,5 @@
 class CatsController < ApplicationController
-    before_action :require_user! %i(create new edit update)
+    before_action :require_user!, only: %i(new create edit update)
 
     def index
         @cats = Cat.all
