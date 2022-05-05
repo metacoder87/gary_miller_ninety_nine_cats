@@ -10,4 +10,12 @@ private
         return nil unless session[:session_token]
         @current_user ||= User.find_by(session_token: session[:session_token])
     end
+
+    def logged_in?
+        !current_user.nil?
+    end
+
+    def require_no_user!
+        redirect_to cats_url if current_user
+    end
 end
