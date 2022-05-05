@@ -5,9 +5,10 @@ class Cat < ApplicationRecord
     
     CAT_COLORS = %w(black brown grey orange yellow white).freeze
 
-    validates :color, inclusion: CAT_COLORS
-    validates :sex, inclusion: %w(M F)
+    validates :color, inclusion: CAT_COLORS, unless: -> { color.blank? }
+    validates :sex, inclusion: %w(M F), if: -> { sex }
     validates :birth_date, :color, :name, :sex, presence: true
+    validate :birth_date_in_the_past, if: -> { birth_date }
 
     belongs_to :owner,
         class_name 'User',
