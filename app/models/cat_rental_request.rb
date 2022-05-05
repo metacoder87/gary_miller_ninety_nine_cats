@@ -1,8 +1,8 @@
 class CatRentalRequest < ApplicationRecord
 
-    STATUS_STATES = %w(Pending Denied Approved).freeze
+    STATUS_STATES = %w(PENDING DENIED APPROVED).freeze
 
-    validates :cat_id, :start_date, :end_date, :status, presence: true
+    validates :start_date, :end_date, :status, presence: true
     validates :status, inclusion: STATUS_STATES
     validate :start_must_come_before_end
     validate :does_not_overlap_approved_request
@@ -66,7 +66,7 @@ private
 
     def does_not_overlap_approved_request
         # no need to check for denied requests
-        return if self.denied
+        return if self.denied?
         unless overlapping_approved_requests.empty?
             errors[:base] <<
                 'Request conflicts with an approved request.'
