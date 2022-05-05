@@ -1,117 +1,117 @@
-html, body, section, article,
-h1, h2, p, nav, main, figure {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    font: inherit;
-    text-align: inherit;
-    text-decoration: inherit;
-    color: inherit;
-    background: transparent;
-    font-family: 'Amatic SC', cursive;
-    font-size: 30px;
-}
+// html, body, section, article,
+// h1, h2, p, nav, main, figure {
+//     margin: 0;
+//     border: 0;
+//     padding: 0;
+//     font: inherit;
+//     text-align: inherit;
+//     text-decoration: inherit;
+//     color: inherit;
+//     background: transparent;
+//     font-family: 'Amatic SC', cursive;
+//     font-size: 30px;
+// }
 
-section {
-    background-color: #009999;
-}
+// section {
+//     background-color: #009999;
+// }
 
-.main-nav {
-    top: 0px;
-    z-index: 100;
-    margin-bottom: 60px;
-}
+// .main-nav {
+//     top: 0px;
+//     z-index: 100;
+//     margin-bottom: 60px;
+// }
 
-nav {
-    width: 100%;
-    background-color: #000066;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0 20px;
-    color: yellow;
-}
+// nav {
+//     width: 100%;
+//     background-color: #000066;
+//     height: 60px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     box-sizing: border-box;
+//     padding: 0 20px;
+//     color: yellow;
+// }
 
-body, div {
-    display: block;
-}
+// body, div {
+//     display: block;
+// }
 
-h1 {
-    font-size: 60px;
-    color: yellow;
-}
+// h1 {
+//     font-size: 60px;
+//     color: yellow;
+// }
 
-a {
-    color: yellow;
-}
+// a {
+//     color: yellow;
+// }
 
-nav a {
-    padding: 0px 10px;
-}
+// nav a {
+//     padding: 0px 10px;
+// }
 
-.cat-index-holder {
-    margin: 50px auto;
-    width: 920px;
-    background-color: #009999;
-}
+// .cat-index-holder {
+//     margin: 50px auto;
+//     width: 920px;
+//     background-color: #009999;
+// }
 
-.cat-index {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+// .cat-index {
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-around;
+//     flex-wrap: wrap;
+// }
 
-.cat-index-item {
-    padding: 20px;
-    margin: 20px 0;
-    width: 235px;
-    height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000066;
-}
+// .cat-index-item {
+//     padding: 20px;
+//     margin: 20px 0;
+//     width: 235px;
+//     height: 280px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: #000066;
+// }
 
-.page {
-    display: flex;
-    justify-content: space-around;
-    background-color: transparent;
-}
+// .page {
+//     display: flex;
+//     justify-content: space-around;
+//     background-color: transparent;
+// }
 
-.centered-box {
-    width: 500px;
-    margin: 50px 0;
-    background-color: #009999;
-    text-align: center;
-    padding: 50px;
-}
+// .centered-box {
+//     width: 500px;
+//     margin: 50px 0;
+//     background-color: #009999;
+//     text-align: center;
+//     padding: 50px;
+// }
 
-table {
-    display: flex;
-    justify-content: space-around;
-    border-collapse: separate;
-    text-indent: initial;
-    border-spacing: 2px;
-}
+// table {
+//     display: flex;
+//     justify-content: space-around;
+//     border-collapse: separate;
+//     text-indent: initial;
+//     border-spacing: 2px;
+// }
 
-th {
-    background-color: #000066;
-    color: yellow;
-    padding: 10px 20px;
-    display: table-cell;
-    vertical-align: inherit;
-    font-weight: bold;
-    text-align: -internal-center;
-}
+// th {
+//     background-color: #000066;
+//     color: yellow;
+//     padding: 10px 20px;
+//     display: table-cell;
+//     vertical-align: inherit;
+//     font-weight: bold;
+//     text-align: -internal-center;
+// }
 
-td {
-    display: table-cell;
-    vertical-align: inherit;
-}
+// td {
+//     display: table-cell;
+//     vertical-align: inherit;
+// }
 
-tbody {
-    background-color: whitesmoke;
-}
+// tbody {
+//     background-color: whitesmoke;
+// }
