@@ -6,3 +6,8 @@
         <%= render 'form', cat: @cat %>
     </div>
 </section>
+<footer>
+    <% content_for :footer do %>
+        <p>New Cat</p>
+    <% end %>
+</footer>
