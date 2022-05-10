@@ -15,9 +15,13 @@ private
         !current_user.nil?
     end
 
-    def login_user!(user)
-        currect_user.reset_session_token!
+    def logout_user!
+        current_user.reset_session_token!
         session[:session_token] = nil
+    end
+
+    def login_user!(user)
+        session[:session_token] = user.reset_session_token!
     end
 
     def require_no_user!
