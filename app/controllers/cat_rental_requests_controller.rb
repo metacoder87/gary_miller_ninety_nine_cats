@@ -1,4 +1,4 @@
-class CatsRentalRequestsController < ApplicationController
+class CatRentalRequestsController < ApplicationController
     before_action :require_user!, only: %i(approve deny)
     before_action :require_cat_ownership!, only: %i(approve deny)
 
@@ -14,7 +14,7 @@ class CatsRentalRequestsController < ApplicationController
     end
 
     def new
-        @rental_request = CatRentalRequest.new
+        @rental_request = CatRentalRequest.new(cat_id: params[:cat_id])
     end
 
     def approve
