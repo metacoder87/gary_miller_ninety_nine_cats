@@ -74,8 +74,9 @@ private
     end
 
     def start_must_come_before_end
-        return if start_date < end_date
-        errors[:start_date] << "Start date must come before end date."
-        errors[:end_date] << "End date must come after start date."
+        return if 
+        errors[:start_date] << "Specify a start date" unless start_date
+        errors[:start_date] << "Start date must come before end date." if start_date > end_date
+        errors[:end_date] << "End date must be specified." unless end_date
     end
 end

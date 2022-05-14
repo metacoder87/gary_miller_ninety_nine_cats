@@ -39,7 +39,7 @@ private
     end
 
     def require_cat_ownership!
-        return if current_user.owns_cat(current_cat)
+        return if current_user.owns_cat?(current_cat)
         redirects_to cats_url(current_cat)
     end
 
