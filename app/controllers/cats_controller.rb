@@ -1,6 +1,6 @@
 class CatsController < ApplicationController
     before_action :require_user!, only: %i(new create edit update)
-
+    # First commit comment
     def index
         @cats = Cat.all
         render :index
