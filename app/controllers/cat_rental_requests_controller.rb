@@ -40,7 +40,7 @@ private
 
     def require_cat_ownership!
         return if current_user.owns_cat?(current_cat)
-        redirects_to cats_url(current_cat)
+        redirect_to cat_url(current_cat)
     end
 
     def cat_rental_request_params
