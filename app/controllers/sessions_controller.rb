@@ -1,9 +1,5 @@
 class SessionsController < ApplicationController
-    before_action :require_no_user!, only: %i(create new destroy)
-
-    def new
-        render :new
-    end
+    before_action :require_no_user!, only: %i(create new)
 
     def create
         user = User.find_by_credentials(
@@ -25,4 +21,7 @@ class SessionsController < ApplicationController
         redirect_to new_session_url
     end
 
+    def new
+        render :new
+    end
 end
