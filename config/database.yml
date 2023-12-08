@@ -41,7 +41,7 @@ development:
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  #port: 5432
+  # port: 5432
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -75,11 +75,12 @@ test:
 #
 # You can use this database configuration with:
 
-  production:
-    url: <%= ENV['DATABASE_URL'] %>
+  # production:
+  #   url: <%= ENV['DATABASE_URL'] %>
 
 production:
   <<: *default
   database: ninety_nine_cats_production
   username: ninety_nine_cats
   password: <%= ENV['NINETY_NINE_CATS_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
