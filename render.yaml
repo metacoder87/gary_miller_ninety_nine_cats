@@ -1,18 +1,18 @@
 databases:
-  - name: ninety_nine_cats
-    databaseName: ninety_nine_cats
-    user: ninety_nine_cats
+  - name: cats
+    databaseName: cats
+    user: cats
 
 services:
   - type: web
-    name: ninety_nine_cats
+    name: cats
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: ninety_nine_cats
+          name: cats
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
