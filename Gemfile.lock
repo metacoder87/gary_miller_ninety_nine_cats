@@ -238,6 +238,8 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  better_errors
+  binding_of_caller
   bootsnap (>= 1.1.0)
   bundler (= 2.2.34)
   capistrano-rails
@@ -247,6 +249,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (~> 3.3)
   pg (>= 1.0.0)
+  pry-rails
   puma (~> 3.11)
   rails (~> 6.1.7.1)
   redis (~> 4.0)
