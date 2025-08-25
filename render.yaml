@@ -1,7 +1,7 @@
 databases:
-  - name: ninety_nine_cats
-    databaseName: ninety_nine_cats_db
-    user: ninety_nine_cats_user
+  - name: ninety-nine-cats-db
+    databaseName: ninety_nine_cats_db_e9v6
+    user: ninety_nine_cats_db_e9v6_user
 
 services:
   - type: web
@@ -12,7 +12,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: ninety_nine_cats
+          name: ninety-nine-cats-db
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false

@@ -80,9 +80,9 @@ test:
 
 production:
   <<: *default
-  host: dpg-clppmnk1jt2c73be56p0-a
+  host: dpg-d2lsp9v5r7bs73e2t4dg-a
   port: 5432
-  database: ninety_nine_cats_db
-  username: ninety_nine_cats_user
+  database: ninety_nine_cats_db_e9v6
+  username: ninety_nine_cats_db_e9v6_user
   password: <%= ENV['NINETY_NINE_CATS_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
