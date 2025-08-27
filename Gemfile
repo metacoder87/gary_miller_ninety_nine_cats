@@ -1,76 +1,45 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '3.1.0'
 
-gem 'bundler', '2.2.34'
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.7.1'
-# Use postgresql as the database for Active Record
-gem 'pg', '>= 1.0.0'
-# Use Puma as the app server
-gem 'puma', '~> 3.11'
-# Use SCSS for stylesheets
-gem 'sass-rails', '>= 6.0.0'
-gem 'sassc'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
-
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
-gem 'faker'
-
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
-
-# Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
-
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bundler', '~> 2.4.7' 
+gem 'rails', '~> 6.1.7', '>= 6.1.7.10' # Update to latest 6.1.x patch for Ruby 3.1.0 compatibility
+gem 'pg', '~> 1.5.8' # Update to latest pg version for better Ruby 3.1.0 support
+gem 'puma', '~> 6.4' # Update to Puma 6.x for Ruby 3.1.0 compatibility and performance
+gem 'sass-rails', '~> 6.0.0' # Keep, but ensure latest version
+# Replace sassc with sassc-rails, as sassc is deprecated
+gem 'sassc-rails', '~> 2.1.2'
+# Replace uglifier with terser, as uglifier is outdated and doesn't support modern JS
+gem 'terser', '~> 1.2.3'
+# Remove coffee-rails, as CoffeeScript is largely deprecated; use plain JS or ES6
+# gem 'coffee-rails', '~> 4.2' # Commented out, recommend removing unless still needed
+gem 'turbolinks', '~> 5.2' # Keep, latest version in 5.x series
+gem 'jbuilder', '~> 2.12' # Update to latest 2.x version
+gem 'redis', '~> 5.3' # Update to latest 5.x version for Ruby 3.1.0
+gem 'bcrypt', '~> 3.1.20' # Update to latest 3.1.x version
+gem 'faker', '~> 3.4' # Update to latest version for Ruby 3.1.0 compatibility
+gem 'bootsnap', '~> 1.18.4', require: false # Update to latest version
+gem 'capistrano-rails', '~> 1.6', group: :development # Update to latest version
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  #gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  
-  #gem 'annotate'
-  # Use the selenium-webdriver gem
-gem 'selenium-webdriver', '~> 4.0'
-
+  gem 'selenium-webdriver', '~> 4.1' # Update to latest 4.x version
+  gem 'pry-rails', '~> 0.3.11' # Update to latest version
+  gem 'better_errors', '~> 2.10' # Update to latest version
+  gem 'binding_of_caller', '~> 1.0' # Update to latest version
 end
 
-group :development do 
-  gem 'pry-rails'
-
-  gem 'better_errors'
-
-  gem 'binding_of_caller'
-#  Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
-#  Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'letter_opener'
+group :development do
+  gem 'web-console', '~> 4.2' # Update to latest version
+  gem 'listen', '~> 3.9' # Update to latest version, remove restrictive upper bound
+  gem 'spring', '~> 4.2' # Update to latest version for Ruby 3.1.0 compatibility
+  gem 'spring-watcher-listen', '~> 2.1' # Update to latest version
+  gem 'letter_opener', '~> 1.10' # Update to latest version
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  # Use the webdrivers gem to manage drivers
-  gem 'webdrivers', '= 5.3.0'
+  gem 'capybara', '~> 3.40' # Update to latest version
+  gem 'webdrivers', '~> 5.3' # Update to latest version, remove exact version pin
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
