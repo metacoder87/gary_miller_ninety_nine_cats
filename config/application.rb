@@ -15,7 +15,7 @@ module NinetyNineCats
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-
+    # Removed Uglifier and replaced with Terser for JS compression
 
     config.secret_key_base = ENV['SECRET_KEY_BASE'] if Rails.env.production?
   end
