@@ -7,6 +7,7 @@ services:
   - type: web
     name: ninety_nine_cats
     runtime: ruby
+    rubyVersion: 3.1.0
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
