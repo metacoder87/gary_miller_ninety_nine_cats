@@ -9,6 +9,7 @@ class Cat < ApplicationRecord
     validates :sex, inclusion: %w(M F), if: -> { sex }
     validates :birth_date, :color, :name, :sex, presence: true
     validate :birth_date_in_the_past, if: -> { birth_date }
+    validates :image_url, allow_blank: true , format: { with: URI::DEFAULT_PARSER.make_regexp(%w[http https]) }
 
     belongs_to :owner,
         class_name: 'User',
@@ -21,6 +22,8 @@ class Cat < ApplicationRecord
     def age
         time_ago_in_words(birth_date)
     end
+
+    before_validation :set_default_image_url, if: -> { image_url.blank? }
 
 private
 
