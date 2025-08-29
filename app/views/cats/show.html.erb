@@ -1,7 +1,7 @@
 <main>
     <section class="page">
         <div class="centered-box">
-            <img src="http://placecats.com/g/300/300">
+            <%= image_tag @cat.image_url || asset_path('default_cat.jpg'), alt: "#{@cat.name} image", size: "300x300" %>
             <h1><%= @cat.name %></h1>
 
             <table>

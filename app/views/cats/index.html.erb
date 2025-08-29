@@ -12,7 +12,7 @@
                 <% @cats.each do |cat| %>
                 <div class="cat-index-item">
                     <div>
-                        <img src="http://placecats.com/g/231/231">
+                        <%= image_tag cat.image_url || asset_path('default_cat.jpg'), alt: "#{cat.name} image", size: "200x200" %>
                         <br>
                         <a href="<%= cat_url(cat) %>"><%= "Rent " + cat.name %></a>
                     </div>
