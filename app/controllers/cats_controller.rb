@@ -44,6 +44,6 @@ class CatsController < ApplicationController
 private
 
     def cat_params
-        params.require(:cat).permit(:name, :image, :birth_date, :age, :color, :sex, :description)
+        params.require(:cat).permit(:name, :image_url, :birth_date, :age, :color, :sex, :description)
     end
 end
