@@ -1,7 +1,7 @@
 databases:
   - name: ninety-nine-cats-db
-    databaseName: ninety_nine_cats_db_e9v6
-    user: ninety_nine_cats_db_e9v6_user
+    databaseName: ninety_nine_cats_db_k1f2
+    user: ninety_nine_cats_db_k1f2_user
 
 services:
   - type: web
