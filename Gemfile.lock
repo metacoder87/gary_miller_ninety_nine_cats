@@ -109,6 +109,9 @@ GEM
     ffi (1.17.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    httparty (0.20.0)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     jbuilder (2.13.0)
@@ -133,10 +136,15 @@ GEM
     marcel (1.0.4)
     matrix (0.4.3)
     method_source (1.1.0)
+    mime-types (3.7.0)
+      logger
+      mime-types-data (~> 3.2025, >= 3.2025.0507)
+    mime-types-data (3.2025.0826)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
     minitest (5.25.5)
     msgpack (1.8.0)
+    multi_xml (0.6.0)
     net-imap (0.5.9)
       date
       net-protocol
@@ -282,6 +290,7 @@ DEPENDENCIES
   capistrano-rails (~> 1.6)
   capybara (~> 3.40)
   faker (~> 3.4)
+  httparty (~> 0.20.0)
   jbuilder (~> 2.12)
   letter_opener (~> 1.10)
   listen (~> 3.9)
