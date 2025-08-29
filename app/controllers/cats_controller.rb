@@ -1,6 +1,6 @@
 class CatsController < ApplicationController
     before_action :require_user!, only: %i(new create edit update)
-    # First commit comment
+    
     def index
         @cats = Cat.all
         render :index
@@ -44,6 +44,6 @@ class CatsController < ApplicationController
 private
 
     def cat_params
-        params.require(:cat).permit(:name, :birth_date, :age, :color, :sex, :description)
+        params.require(:cat).permit(:name, :image, :birth_date, :age, :color, :sex, :description)
     end
 end
