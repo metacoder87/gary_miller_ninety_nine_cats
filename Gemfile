@@ -12,6 +12,7 @@ gem 'sass-rails', '~> 6.0.0' # Keep, but ensure latest version
 gem 'sassc-rails', '~> 2.1.2'
 # Replace uglifier with terser, as uglifier is outdated and doesn't support modern JS
 gem 'terser', '~> 1.2.3'
+gem 'httparty', '~> 0.20.0' # Add HTTParty for making HTTP requests
 # Remove coffee-rails, as CoffeeScript is largely deprecated; use plain JS or ES6
 # gem 'coffee-rails', '~> 4.2' # Commented out, recommend removing unless still needed
 gem 'turbolinks', '~> 5.2' # Keep, latest version in 5.x series
