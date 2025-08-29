@@ -21,6 +21,7 @@ last_year = Date.today.prev_year.year
     name: Faker::Hipster.word,
     color: Cat::CAT_COLORS.sample,
     sex: ["M", "F"].sample,
+    image_url: CatImageService.fetch_random_cute_cat_image_url,
     description: Faker::Hipster.sentence,
     birth_date: Faker::Date.between(from: 10.years.ago, to: Date.today)
   )
