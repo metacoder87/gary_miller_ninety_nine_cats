@@ -29,4 +29,11 @@ private
             errors[:birth_date] << 'must have been born in the past'
         end
     end
+
+    def set_default_image_url
+        self.image_url = CatImageService.fetch_random_cute_cat_image_url
+    rescue StandardError => e
+        Rails.logger.error "Failed to set image URL for cat #{name}: #{e.message}"
+        self.image_url = 'https://cdn2.thecatapi.com/images/default_cat.jpg'  # Fallback
+    end
 end
