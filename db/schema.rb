@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2022_05_05_031315) do
     t.string "color", null: false
     t.string "name", null: false
     t.string "sex", null: false
+    t.string "image_url", null: false
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
