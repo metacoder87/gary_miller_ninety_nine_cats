@@ -53,6 +53,14 @@
         <textarea name="cat[description]"><%= cat.description %></textarea>
     </label>
 
+    <label for="cat_image_url">Image URL (optional; default is a random cute cat)</label>
+    <input 
+        type="url"
+        name="cat[image_url]"
+        id="cat_image_url"
+        value="<%= cat.image_url %>"
+        placeholder="https://example.com/cat.jpg">
+
     <% submit_text = (cat.persisted? ? 'Update' : 'Create') + " cat!" %>
     <input type="submit" value="<%= submit_text %>">
 
